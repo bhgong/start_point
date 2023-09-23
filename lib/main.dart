@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final preferences = await SharedPreferences.getInstance();
-  final repository = AppDarkModeRepository(preferences);
+  // final preferences = await SharedPreferences.getInstance();
+  // final repository = AppDarkModeRepository(preferences);
 
-  await Firebase.initializeApp(
-    // name: "dev project",
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // await Firebase.initializeApp(
+  //   // name: "dev project",
+  //   options: DefaultFirebaseOptions.currentPlatform,
+  // );
 
   runApp(
     // ProviderScope(

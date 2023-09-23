@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102771446009",
+    "project_id": "flutter-start-point",
+    "storage_bucket": "flutter-start-point.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102771446009:android:c24744ef2499ad1ea4d228",
+        "android_client_info": {
+          "package_name": "com.example.flutter_start_point_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3OZbE2npO-N6G_meYr7fv0SlP_N1llrQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
