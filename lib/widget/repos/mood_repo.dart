@@ -19,8 +19,10 @@ class MoodRepository {
     return doc.data();
   }
 
-  Future<QuerySnapshot<Map<String, dynamic>>> fetchMoods() {
+  Future<QuerySnapshot<Map<String, dynamic>>> fetchMoods() async {
     final query = _db.collection("moods").orderBy("date", descending: true);
+
+    return query.get();
   }
 
   Future<void> deleteMood(String uid) async {
