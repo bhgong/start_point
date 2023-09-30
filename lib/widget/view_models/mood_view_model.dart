@@ -31,6 +31,13 @@ class MoodViewModel extends AsyncNotifier<void> {
       ));
     });
   }
+
+  Future<void> removeMood(String userId) async {
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() async {
+      await _moodRepository.deleteMood(userId);
+    });
+  }
 }
 
 final moodProvider = AsyncNotifierProvider<MoodViewModel, void>(

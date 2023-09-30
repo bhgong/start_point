@@ -63,9 +63,9 @@ class _PostScreenState extends ConsumerState<PostScreen> {
   }
 
   void _onPostTap(BuildContext context) async {
-    ref.read(moodProvider.notifier).postMood(comments, mood, context);
+    await ref.read(moodProvider.notifier).postMood(comments, mood, context);
 
-    // context.go("/home");
+    context.go("/home");
   }
 
   void _onAddComments(String value) {
@@ -120,7 +120,7 @@ class _PostScreenState extends ConsumerState<PostScreen> {
                     inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.allow(
                         RegExp(
-                            r'[a-z|A-Z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|ᆞ|ᆢ|ㆍ|ᆢ|ᄀᆞ|ᄂᆞ|ᄃᆞ|ᄅᆞ|ᄆᆞ|ᄇᆞ|ᄉᆞ|ᄋᆞ|ᄌᆞ|ᄎᆞ|ᄏᆞ|ᄐᆞ|ᄑᆞ|ᄒᆞ]'),
+                            r'[" "|a-z|A-Z|0-9|ㄱ-ㅎ|ㅏ-ㅣ|가-힣|ᆞ|ᆢ|ㆍ|ᆢ|ᄀᆞ|ᄂᆞ|ᄃᆞ|ᄅᆞ|ᄆᆞ|ᄇᆞ|ᄉᆞ|ᄋᆞ|ᄌᆞ|ᄎᆞ|ᄏᆞ|ᄐᆞ|ᄑᆞ|ᄒᆞ]'),
                       ),
                     ],
                     keyboardType: TextInputType.text,

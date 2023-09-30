@@ -18,6 +18,14 @@ class MoodRepository {
     final doc = await _db.collection("moods").doc(uid).get();
     return doc.data();
   }
+
+  Future<QuerySnapshot<Map<String, dynamic>>> fetchMoods() {
+    final query = _db.collection("moods").orderBy("date", descending: true);
+  }
+
+  Future<void> deleteMood(String uid) async {
+    await _db.collection("moods").doc(uid).delete();
+  }
 }
 
 final moodRepo = Provider(
