@@ -194,7 +194,7 @@ class _SignUpScreenState extends ConsumerState<SignUpScreen> {
                           vertical: Sizes.size5,
                         ),
                         hintText: 'Password',
-                        suffixIcon: _isPassWordVaild()
+                        suffix: _isPassWordVaild()
                             ? const FaIcon(
                                 FontAwesomeIcons.solidCircleCheck,
                                 size: Sizes.size20,

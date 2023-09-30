@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start_point_application/constants/gaps.dart';
-import 'package:flutter_start_point_application/utils.dart';
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavTab extends StatelessWidget {
@@ -18,12 +16,12 @@ class NavTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDark = isDarkMode(context);
+    // var isDark = isDarkMode(context);
     return Expanded(
       child: GestureDetector(
         onTap: () => onTap(),
         child: Container(
-          color: isDark ? Colors.black : Colors.white,
+          color: const Color(0xFFECE6C2),
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 300),
             opacity: isSelected ? 1 : 0.6,
@@ -32,7 +30,6 @@ class NavTab extends StatelessWidget {
               children: [
                 FaIcon(
                   icon,
-                  color: isDark ? Colors.white : Colors.black,
                 ),
                 Gaps.v5,
               ],

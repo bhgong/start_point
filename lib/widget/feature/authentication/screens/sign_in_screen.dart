@@ -214,7 +214,7 @@ class _SignInScreenState extends ConsumerState<SignInScreen> {
                           vertical: Sizes.size5,
                         ),
                         isDense: true,
-                        suffixIcon: _isPassWordVaild()
+                        suffix: _isPassWordVaild()
                             ? const FaIcon(
                                 FontAwesomeIcons.solidCircleCheck,
                                 color: Colors.green,
